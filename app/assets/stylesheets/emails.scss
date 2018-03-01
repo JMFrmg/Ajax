@@ -1,0 +1,18 @@
+// Place all the styles related to the Emails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#email_content {
+	background-color: blue;
+	height: 400px;
+	width: 300px;
+	color: black;
+	
+}
+
+#email_content object {
+
+		font-weight: bolder;
+		font-size: 3em;
+	
+}

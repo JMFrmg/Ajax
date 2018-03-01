@@ -1,0 +1,22 @@
+<h1>Liste des emails</h1>
+<table>
+	<tr>
+		<th>Emails :</th>
+	
+	</tr>
+	<% @emails.each do |email| %>
+	<tr id="email_<%=email.id%>">
+		
+		<td><%= link_to email.object, email_path(email), remote: true %></td>
+		<td><%= link_to "Supprimer", email, remote: true, method: :delete%></td>
+		
+	</tr>
+	<% end %>
+</table>
+
+
+<%= link_to 'Créer un nouveau mail', new_email_path %>
+
+ <div id="email_content">
+        <div id="email_body" style="display:none"> </div>
+ </div>

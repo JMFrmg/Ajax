@@ -1,0 +1,31 @@
+<h1>Créer un nouvel email</h1>
+<p> </p>
+<%= form_tag (emails_path) do %>
+
+ 
+  <% if @email.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@gemail.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @email.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <%= label_tag 'Object', 'Object :' %>
+  <%= text_field_tag 'object' %>
+  <%= label_tag 'Contenu', 'Contenu :' %>
+  <%= text_field_tag 'body' %>
+  <%= submit_tag 'Créer un nouvel email' %>
+<% end %>
+
+<p>
+<br />
+<%= link_to 'Liste de tous les emails', emails_path %>
+</p>
