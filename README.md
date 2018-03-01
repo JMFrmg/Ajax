@@ -1,24 +1,7 @@
-# README
+# Binevenue!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+. L'affichage du contenue des emails avec ajax fonctionne
+. La suppression des emails avec ajax fonctionne aussi
+. En revanche je n'ai pas fait la partie 4 sur la coloration des emails déjà lus
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Bonne lecture :)
