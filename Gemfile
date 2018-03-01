@@ -41,8 +41,8 @@ gem 'bootstrap'
 gem 'bootswatch'
 gem 'devise'
 gem 'jquery'
-gem 'pg', '0.20.0'
-#gem 'sqlite3'
+#gem 'pg', '0.20.0'
+gem 'sqlite3'
 
 
 group :development, :test do
