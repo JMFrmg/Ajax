@@ -1,6 +1,4 @@
-class EmailsController < ApplicationController
-  before_action :all_emails, only: [:index, :create, :update, :destroy]
-  before_action :set_emails, only: [:edit, :update, :destroy]
+class EmailsController < ApplicationController 
   respond_to :html, :js
   def index
     @emails = Email.all
@@ -21,7 +19,7 @@ class EmailsController < ApplicationController
   end
 
   def show
-    all_emails
+    @emails = Email.all
     @email = Email.find(params[:id])
     @email.save
      
@@ -37,14 +35,5 @@ class EmailsController < ApplicationController
   private #on ne récupère de la view que les données qui nous intéressent (anonyme_user et content) - placé ici dans le script par convention
     def emails_params
       params.permit(:object, :body)
-
-    end
-     def all_emails
-      @emails = Email.all.sort { |a,b| b.created_at <=> a.created_at }
-      @emails_unread = Email.where(read: false)
-    end
-
-    def set_emails
-      @email = Email.find(params[:id])
     end
 end
